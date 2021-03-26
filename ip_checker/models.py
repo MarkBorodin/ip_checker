@@ -11,7 +11,16 @@ class BaseModel(models.Model):
 
 class IP(BaseModel):
     address = models.TextField(max_length=64)
-    company = models.TextField(max_length=512, null=True)
+    company = models.TextField(max_length=1024, null=True)
+    PTR_record = models.TextField(max_length=1024, null=True)
+    ip_range = models.TextField(max_length=1024, null=True)
+    host = models.TextField(max_length=1024, null=True)
+    description = models.TextField(max_length=1024, null=True)
+    asn_description = models.TextField(max_length=1024, null=True)
+    real_address = models.TextField(max_length=1024, null=True)
+    country = models.TextField(max_length=128, null=True)
+    city = models.TextField(max_length=128, null=True)
+    emails = models.TextField(max_length=128, null=True)
 
     class Meta:
         ordering = ["-create_date"]

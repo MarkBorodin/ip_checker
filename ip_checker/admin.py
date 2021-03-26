@@ -10,14 +10,17 @@ class IPAdmin(admin.ModelAdmin):
         models.TextField: {'widget': Textarea(attrs={'rows': 1, 'cols': 170})},
     }
     list_display = (
-        'address', 'company'
+        'address', 'company', 'host', 'PTR_record', 'ip_range',
+        'description', 'asn_description',  'real_address',  'country',  'city', 'emails'
     )
     search_fields = (
-        'address', 'company'
+        'address', 'company', 'host', 'PTR_record', 'ip_range',
+        'description', 'asn_description',  'real_address',  'country',  'city', 'emails'
     )
-    list_filter = (
-        'address', 'company'
-    )
+    # list_filter = (
+    #     'address', 'company', 'host', 'PTR_record', 'ip_range',
+    #     'description', 'asn_description', 'real_address', 'country', 'city', 'emails'
+    # )
     fields = (
         'address',
     )
